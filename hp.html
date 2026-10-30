@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HPの表示</title>
+    <style>
+      .box { width: 200px; padding: 16px; border: 2px solid #333; }
+      .danger { background-color: #ffcccc; border-color: red; }
+    </style>
+  </head>
+  <body>
+    <div id="hp" class="box">HP：10</div>
+    <button onclick="damage()">ダメージを受ける</button>
+    <button onclick="heal()">回復する</button>
+
+    <script>
+      const hp = document.getElementById("hp");
+
+      function damage() {
+        hp.innerText = "HP：2";
+        hp.classList.add("danger");      // 赤くする（box は残る）
+      }
+
+      function heal() {
+        hp.innerText = "HP：10";
+        hp.classList.remove("danger");   // 元に戻す
+      }
+    </script>
+  </body>
+</html>

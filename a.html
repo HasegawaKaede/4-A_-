@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptの練習</title>
+  </head>
+<body>
+    <p>ページ</p>
+    <button onclick="myFunc();">str</button>
+    <button onclick="showDouble();">2倍を表示</button>   <!-- ★追加：2つ目のボタン -->
+    <script>
+
+            let str = prompt("何か入力してください");   // ★追加：ページを開いたときに入力欄が出る
+
+      function myFunc() {
+        console.log(str);                         // ★変更："Hello" を str にする
+      }
+
+      function myFunc() {              // 手順4のまま
+        console.log("str");
+      }
+
+      // ★追加：受け取った n を2倍して返す（C言語と違い、戻り値の型は書かない）
+      function double(str) {
+        return str * 2;
+      }
+
+      // ★追加：double() を呼び出して、返ってきた値を表示する
+      function showDouble() {
+        const result = double(str);            // 返ってきた値を result に入れる
+        console.log(`strの2倍は ${result}`);   // → 21の2倍は 42
+      }
+
+
+      // double() と showDouble() は１-４のまま
+    </script>
+  </body>

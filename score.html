@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>分岐と反復の練習</title>
+  </head>
+  <body>
+    <p id="score">スコア：0</p>
+    <button onclick="addScore()">敵をたおす</button>
+
+    <script>
+      let score = 0;   // 値が変わるので let
+
+      function addScore() {
+        score = score + 10;                                     // 点数を増やす
+        const scoreText = document.getElementById("score");     // 取得する
+        scoreText.innerText = `スコア：${score}`;               // 変える（１-２のテンプレート文字列）
+      }
+    </script>
+  </body>

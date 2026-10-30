@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クラスの切り替え</title>
+    <style>
+      .highlight {
+        color: green;
+        background-color: #e0ffe0;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+<body>
+    <h2>メッセージ：<span id="msg">-</span></h2>
+    <button id="btnA">ボタンA</button>
+    <button id="btnB">ボタンB</button>
+
+    <script>
+      const msg = document.getElementById("msg");
+      const btnA = document.getElementById("btnA");
+      const btnB = document.getElementById("btnB");
+
+      // 無名関数（名前のない関数）
+      btnA.addEventListener("click", function () {
+        msg.innerText = "Aが押された";
+      });
+
+      // アロー関数（同じ意味の短い書き方）
+       btnB.addEventListener("click", (e) => {   // ← ( ) の中に e を書いた
+        msg.innerText = "Bが押された";
+        console.log(e.type);
+        console.log(e.clientX);                     // 何のイベントか
+      });
+    </script>
+  </body>
+</html>

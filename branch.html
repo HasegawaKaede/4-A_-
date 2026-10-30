@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>分岐と反復の練習</title>
+  </head>
+  <body>
+    <script>
+           const a = Number(prompt("1つ目の数"));
+      const b = Number(prompt("2つ目の数"));
+
+      if (a > b) {
+        alert("1つ目の方が大きい");
+      } else if (a < b) {
+        alert("2つ目の方が大きい");
+      } else {
+        alert("同じです");
+      } // ここにコードを入力する
+
+            const n = prompt("整数を入力してください");
+      if (n % 2 === 0) {
+        alert("偶数です");
+      } else {
+        alert("奇数です");
+      }
+            const v= Math.floor(Math.random() * 5);   // 0〜4 のどれか
+
+      switch (v) {
+        case 0:
+          alert("大吉！");
+          break;
+        case 1:
+          alert("中吉");
+          break;
+        case 2:
+          alert("小吉");
+          break;
+        case 3:
+          alert("吉");
+          break;
+        case 4:
+          alert("凶…");
+          break;
+      }
+    </script>
+  </body>
+</html>

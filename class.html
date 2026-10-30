@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クラスを付け替える</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="msg" class="blue">こんにちは！</p>
+    <button onclick="changeColor()">色を変える</button>
+
+    <script>
+      function changeColor() {
+        const el = document.getElementById("msg");
+
+        // 方法1：上書き（blue → red）
+        // el.className = "red";
+
+        // 方法2：追加（blue + red）
+        // el.classList.add("red");
+
+        // 方法3：削除（blue が消える）
+         el.classList.remove("blue");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>分岐と反復の練習</title>
+  </head>
+ <body>
+    <p id="msgg">Hello</p>
+    <button onclick="changeText()">テキスト変更</button>
+
+    <script>
+      function changeText() {
+        const el = document.getElementById("msg");
+
+        // ① テキストだけ変更（HTMLは解釈されない）
+        //el.innerText = "<b>こんにちは！</b>";
+
+        // ② HTMLとして解釈されて太字になる
+         el.innerHTML = "<b>こんにちは！</b>";
+      }
+    </script>
+  </body>

@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptの練習</title>
+  </head>
+ <body>
+    <script>
+      const a = 5;
+      const b = 3;
+      const c = 3;
+      console.log(a === b);   // 等しい
+      console.log(b === c);
+      console.log(a > b);
+      console.log(b >= c);
+      console.log(a !== b);   // 等しくない
+            console.log(5 == "5");    // イコール2つ：true  … 型をそろえてから比べる
+      console.log(5 === "5");   // イコール3つ：false … 型も含めて比べる
+      console.log(!a);   // 5 は true 扱い。! で反転するので false
+
+      const name = "";
+      if (name) {
+        console.log("名前があります");
+      } else {
+        console.log("名前が空です");
+      }
+</script>
+  </body>

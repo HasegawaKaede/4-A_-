@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <p>コンソールを見てください</p>
+
+    <script>
+      const player = {
+        name: "ゆうき",
+        x: 50,
+        y: 96,
+        hp: 10
+      };
+
+      console.log(player);          // オブジェクトぜんぶ
+      console.log(player.name);     // name を取り出す
+      console.log(player.hp);       // hp を取り出す
+
+            player.x = player.x + 10;     // 右に10動く
+      player.hp = player.hp - 3;    // ダメージを受ける
+      player.score = 0;             // 新しい項目を増やす
+      console.log(player);
+
+            console.log(player.hp);       // . で取り出す
+      console.log(player["hp"]);    // [" "] で取り出す（同じ値が出る）
+
+      const key = "name";           // 名前を変数に入れておく
+      console.log(player[key]);     // [変数] でも取り出せる
+
+            const ranking = [
+        { name: "ゆうき", score: 950 },
+        { name: "さくら", score: 870 },
+        { name: "はると", score: 820 }
+      ];
+
+      console.log(ranking[0]);          // 0番目のオブジェクト
+      console.log(ranking[0].name);     // 0番目の name
+      console.log(ranking[1].score);    // 1番目の score
+
+      for (const item of ranking) {
+        console.log(`${item.name}：${item.score}点`);
+      }
+
+        console.log(player.Hp);           // hp の h を大文字にした
+    </script>
+  </body>
